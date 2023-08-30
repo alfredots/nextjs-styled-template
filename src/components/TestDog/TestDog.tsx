@@ -1,7 +1,9 @@
+import * as S from './styles'
+
 export const TestDog = () => {
   return (
-    <div>
+    <S.Container>
       <h1>TestDog</h1>
-    </div>
+    </S.Container>
   )
 }
