@@ -21,6 +21,8 @@
     ],
     "baseUrl": "src",
     "paths": {
+      "common": ["common/index.ts"],
+      "components":["components/index.ts"],
       "@views/*": ["views/*"],
       "@hooks": ["hooks/index.ts"],
       "@styles/*": ["styles/*"]
