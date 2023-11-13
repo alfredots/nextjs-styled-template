@@ -5,7 +5,7 @@ import { GetAllResponse, Post } from './types'
 
 class PostService extends HttpClient {
   public constructor() {
-    super(Endpoints.external.posts)
+    super(Endpoints.url.posts)
   }
 
   public getAll = async (signal?: AbortSignal) => {

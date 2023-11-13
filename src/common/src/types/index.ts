@@ -1,11 +1,8 @@
-/*Layout Props */
-type LayoutProps = {
+export type Layout = {
   display: 'grid' | 'flex' | 'block' | 'inline'
-
 }
 
-/*Grid Props */
-type GridProps = {
+export type Grid = {
   alignItems: string
   gap: string
   gridTemplateAreas: string
@@ -13,32 +10,40 @@ type GridProps = {
   justifyItems: string
 }
 
+export type Positioning = {
+  position: 'relative' | 'absolute' | 'sticky' | 'fixed' | 'static'
+  top: string
+  right: string
+  bottom: string
+  left: string
+  insetInlineStart: string
+  insetInlineEnd: string
+  insetInline: string
+  insetBlockStart: string
+  insetBlockEnd: string
+  insetBlock: string
+  zIndex: string
+}
 
-/* Positioning */
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-inset-inline-start: 0;
-inset-inline-end: 0;
-inset-inline: 0;
-inset-block-start: 0;
-inset-block-end: 0;
-inset-block: 0;
-z-index: 10;
+export type Spacing = {
+  margin: string
+  padding: string
+}
 
-/* Spacing */
-margin
-padding
+export type Sizing = {
+  width: string
+  height: string
+  minWidth: string
+  minHeight: string
+  maxWidth: string
+  maxHeight: string
+}
 
-/* Sizing */
-width
-height
-minWidth
-minHeight
-maxWidth
-maxHeight
-
-
-https://stackoverflow.com/questions/45205593/how-to-convert-a-json-style-object-to-a-css-string
+export type Font = {
+  fontSize: string
+  lineHeight: string
+  fontWeight: string
+  letterSpacing: string
+  color: string
+  textDecoration: string
+}

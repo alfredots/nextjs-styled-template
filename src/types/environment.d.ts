@@ -1,5 +1,11 @@
-declare namespace NodeJS {
-  export interface ProcessEnv {
-    NEXT_PUBLIC_NEXT_ENV: 'development' | 'staging' | 'production'
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      NEXT_PUBLIC_BASE_URL: string
+      NEXT_PUBLIC_USER_TYPE: string
+      NEXT_PUBLIC_USER_TOKEN_EXPIRES_IN: string
+      NEXT_PUBLIC_USER_TOKEN: string
+      NEXT_NODE_ENV: string
+    }
   }
 }

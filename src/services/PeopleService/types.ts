@@ -1,24 +1,8 @@
 import { AxiosError } from 'axios'
-
-export type PeopleProps = {
-  id: {
-    value: string
-  }
-  location: {
-    city: string
-  }
-  gender: string
-  name: {
-    first: string
-    last: string
-  }
-  email: string
-  cell: string
-  nat: string
-}
+import { People } from 'types/People/PeopleType'
 
 export type GetAllResponse = {
-  results: PeopleProps[]
+  data: People
 }
 
 export type ErrorProps = {
