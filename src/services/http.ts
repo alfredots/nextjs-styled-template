@@ -33,19 +33,19 @@ export class HttpClient {
     return Promise.reject(error)
   }
 
-  get<T>(url: string, config: AxiosRequestConfig = {}) {
+  public get<T>(url: string, config: AxiosRequestConfig = {}) {
     return this.instance.get<T>(url, config)
   }
 
-  put<T>(url: string, config: AxiosRequestConfig = {}) {
+  public put<T>(url: string, config: AxiosRequestConfig = {}) {
     return this.instance.get<T>(url, config)
   }
 
-  post<T>(url: string, body: unknown, config: AxiosRequestConfig = {}) {
+  public post<T>(url: string, body: unknown, config: AxiosRequestConfig = {}) {
     return this.instance.post<T>(url, body, config)
   }
 
-  delete<T>(url: string, config: AxiosRequestConfig = {}) {
+  public delete<T>(url: string, config: AxiosRequestConfig = {}) {
     return this.instance.delete<T>(url, config)
   }
 }

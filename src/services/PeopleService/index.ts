@@ -1,12 +1,12 @@
 import { Endpoints } from 'services/endpoints'
 import { HttpClient } from 'services/http'
-import { People } from 'types/People/PeopleType'
+import type { People } from 'types/People/PeopleType'
 
 class PeopleService {
   public constructor(private http: HttpClient) {}
 
-  public get = async () => {
-    const response = await this.http.get<People>('?results=20')
+  public async get() {
+    const response = await this.http.get<People[]>('?results=20')
     return response
   }
 }

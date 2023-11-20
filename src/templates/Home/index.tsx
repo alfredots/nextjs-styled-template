@@ -1,8 +1,17 @@
+import { useEffect } from 'react'
+
 import { Box } from 'common'
+import { usePeople } from 'hooks'
 
 import * as S from './styles'
 
 export const HomeTemplate = () => {
+  const { peoples, getPeoples } = usePeople()
+
+  useEffect(() => {
+    getPeoples()
+  }, [getPeoples])
+
   return (
     <main>
       <S.Heading>
@@ -16,6 +25,7 @@ export const HomeTemplate = () => {
       >
         teste
       </Box>
+      <p>{JSON.stringify(peoples)}</p>
     </main>
   )
 }

@@ -1,14 +1,13 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import { inter } from '@styles/fonts'
-import { GlobalStyles } from '@styles/global'
-import { theme } from '@styles/theme'
 import { ThemeProvider } from 'styled-components'
+
+import { getTheme, GlobalStyles, inter } from 'styles'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={getTheme()}>
       <Head>
         <title>TWDNEXT</title>
         <meta
