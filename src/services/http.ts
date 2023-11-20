@@ -7,7 +7,7 @@ import axios, {
 
 import { errorHandler } from './error'
 
-export abstract class HttpClient {
+export class HttpClient {
   protected readonly instance: AxiosInstance
 
   public constructor(baseURL: string) {
@@ -33,23 +33,19 @@ export abstract class HttpClient {
     return Promise.reject(error)
   }
 
-  protected get<T>(url: string, config: AxiosRequestConfig = {}) {
+  get<T>(url: string, config: AxiosRequestConfig = {}) {
     return this.instance.get<T>(url, config)
   }
 
-  protected put<T>(url: string, config: AxiosRequestConfig = {}) {
+  put<T>(url: string, config: AxiosRequestConfig = {}) {
     return this.instance.get<T>(url, config)
   }
 
-  protected post<T>(
-    url: string,
-    body: unknown,
-    config: AxiosRequestConfig = {}
-  ) {
+  post<T>(url: string, body: unknown, config: AxiosRequestConfig = {}) {
     return this.instance.post<T>(url, body, config)
   }
 
-  protected delete<T>(url: string, config: AxiosRequestConfig = {}) {
+  delete<T>(url: string, config: AxiosRequestConfig = {}) {
     return this.instance.delete<T>(url, config)
   }
 }

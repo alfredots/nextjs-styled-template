@@ -1,13 +1,6 @@
-import { AxiosError } from 'axios'
+import { AxiosError, AxiosResponse } from 'axios'
 import { People } from 'types/People/PeopleType'
 
-export type GetAllResponse = {
+export type GetAll = {
   data: People
 }
-
-export type ErrorProps = {
-  data: {
-    error: string
-  }
-  status: number
-} & AxiosError

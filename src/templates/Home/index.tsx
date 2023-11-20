@@ -2,7 +2,7 @@ import { Box } from 'common'
 
 import * as S from './styles'
 
-export const HomeView = () => {
+export const HomeTemplate = () => {
   return (
     <main>
       <S.Heading>

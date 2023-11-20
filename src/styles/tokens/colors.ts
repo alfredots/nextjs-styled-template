@@ -28,5 +28,6 @@ export const colors = {
   'success-500': '#2e7d32',
   'success-900': '#1b5e20',
   white: '#FFF',
-  black: '#000'
+  black: '#000',
+  'purple-500': 'purple'
 }

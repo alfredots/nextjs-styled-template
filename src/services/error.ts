@@ -35,7 +35,7 @@ export async function errorHandler(error: any) {
 
   const statusCode = response?.status as keyof typeof defaultMessages
 
-  alert(defaultMessages[statusCode])
+  console.log(defaultMessages[statusCode])
 
   return null
 }

@@ -1,5 +1,5 @@
-import { HomeView } from '@views/Home'
+import { HomeTemplate } from 'templates/Home'
 
 export default function Home() {
-  return <HomeView />
+  return <HomeTemplate />
 }

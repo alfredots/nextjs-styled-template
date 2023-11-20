@@ -1,6 +1,6 @@
-import { breakpoints } from './tokens/breakpoints'
+import { breakpoints } from './breakpoints'
 
-export const maxWidth = {
+export const minWidth = {
   xs: `(min-width: ${breakpoints.xs})`,
   sm: `(min-width: ${breakpoints.sm})`,
   md: `(min-width: ${breakpoints.md})`,
