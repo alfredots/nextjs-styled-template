@@ -1,8 +1,7 @@
 {
   "env": {
     "browser": true,
-    "es2021": true,
-    "node": true
+    "es2021": true
   },
   "settings": {
     "react": {
@@ -11,50 +10,40 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "next",
-    "prettier"
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 13,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "import-helpers"
-  ],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "import-helpers"],
   "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@next/next/no-img-element": "off",
     "import-helpers/order-imports": [
       "warn",
       {
-        "newlinesBetween": "always", // Cria uma nova linha para separar as importacoes
+        "newlinesBetween": "always",
         "groups": [
           ["/^react/", "/^next/"],
+          "/^contentlayer/",
           "module",
           "/^@shared/",
           "absolute",
-          "/^components/",
-          "/^pages/",
+          "/^@/components/",
+          "/^@/pages/",
           "/utils/",
-          "/constants/",
-          "/^store/",
-          "/^styles/",
-          "/^templates/",
+          "/^@/models/",
+          "/^@/store/",
+          "/^@/lib/",
+          "/^@/styles/",
+          "/^@/templates/",
           ["parent", "sibling", "index"]
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }

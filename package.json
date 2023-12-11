@@ -6,17 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "lint:fix": "eslint src --fix",
+    "lint:eslint": "eslint src --report-unused-disable-directives --max-warnings=0",
     "test": "jest",
+    "test:2": "npm run test --findRelatedTests --bail --passWithNoTests",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "prepare": "husky install",
-    "prepare-husky": "chmod +x ./node_modules/husky/lib/bin.js && chmod +x ./.husky/pre-commit",
-    "code:check": "eslint ./src --ext .ts,.tsx --report-unused-disable-directives --max-warnings=0",
-    "code:format": "eslint ./src --ext .ts,.tsx --fix",
-    "plop": "plop",
-    "generate": "npm run plop --plopfile plopfile.js"
+    "postbuild": "next-sitemap --config next-sitemap.config.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "npm run lint:eslint"
+    ]
   },
   "dependencies": {
     "@types/node": "20.1.4",
@@ -38,6 +45,7 @@
     "@storybook/nextjs": "^7.0.27",
     "@storybook/react": "^7.0.27",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@swc/jest": "^0.2.29",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/styled-components": "^5.1.26",
@@ -51,12 +59,12 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.1",
     "eslint-plugin-storybook": "^0.6.12",
     "husky": "^8.0.3",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
     "jest-styled-components": "^7.1.1",
+    "lint-staged": "^15.2.0",
     "plop": "^3.1.2",
     "prettier": "^2.8.8",
     "storybook": "^7.0.27",

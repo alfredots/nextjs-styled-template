@@ -1,5 +1,4 @@
 import { CSSProp, css } from 'styled-components'
-
 import { minWidth } from 'styles/tokens/media'
 
 export const makeMediaQueryMinWidth = (

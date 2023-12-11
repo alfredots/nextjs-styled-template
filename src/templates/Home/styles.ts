@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-
 import { makeMediaQueryMinWidth } from 'styles'
 
 export const Heading = styled.h2`
