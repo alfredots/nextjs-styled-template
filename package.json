@@ -10,7 +10,7 @@
     "lint:fix": "eslint src --fix",
     "lint:eslint": "eslint src --report-unused-disable-directives --max-warnings=0",
     "test": "jest",
-    "test:2": "npm run test --findRelatedTests --bail --passWithNoTests",
+    "test:watch": "npm run test --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "postbuild": "next-sitemap --config next-sitemap.config.js"

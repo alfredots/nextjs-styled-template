@@ -1,6 +1,11 @@
+/* eslint-disable no-undef */
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: "",
+  compiler: {
+    styledComponents: {
+      ssr: true
+    }
+  }
 };
 
 module.exports = nextConfig;
