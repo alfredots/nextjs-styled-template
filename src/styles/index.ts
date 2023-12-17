@@ -3,3 +3,4 @@ export * from './functions/make-media-query';
 export * from './functions/spacing';
 export * from './fonts';
 export * from './global';
+export * from './functions/generate-css-vars';

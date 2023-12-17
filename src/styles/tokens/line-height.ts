@@ -1,4 +1,4 @@
-export const LineHeight = {
+export const lineHeight = {
   '16px': '1rem',
   '20px': '1,25rem',
   '24px': '1.5rem',
