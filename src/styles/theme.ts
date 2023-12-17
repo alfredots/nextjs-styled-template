@@ -1,3 +1,5 @@
+import { minWidth } from './functions/make-media-query';
+import { setSpacing } from './functions/spacing';
 import { colors } from './tokens/colors';
 import { fontSize } from './tokens/font-size';
 import { fontWeight } from './tokens/font-weight';
@@ -15,7 +17,11 @@ const theme = {
   fontSize,
   fontWeight,
   lineHeight,
-  screen
+  screen,
+  utilities: {
+    minWidth,
+    setSpacing
+  }
 } as const;
 
 export const getTheme = () => {

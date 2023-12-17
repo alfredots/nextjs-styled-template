@@ -1,16 +1,20 @@
 import styled, { css } from 'styled-components';
-import { minWidth } from 'styles';
 
 export const Heading = styled.h2`
-  ${({ theme }) => css`
-    color: ${theme.colors['primary-500']};
-    font-size: var(--font-size-36px);
+  ${({ theme }) => {
+    const { colors } = theme;
+    const { minWidth, setSpacing } = theme.utilities;
 
-    ${minWidth(
-      'lg',
-      css`
-        background: red;
-      `
-    )}
-  `}
+    return css`
+      background: ${colors['error-900']};
+      padding: ${setSpacing('8px', '16px')};
+
+      ${minWidth(
+        'md',
+        css`
+          color: ${colors['neutral-900']};
+        `
+      )};
+    `;
+  }}
 `;
