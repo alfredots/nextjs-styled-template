@@ -1,5 +1,3 @@
-import { minWidth } from './functions/make-media-query';
-import { setSpacing } from './functions/spacing';
 import { colors } from './tokens/colors';
 import { fontSize } from './tokens/font-size';
 import { fontWeight } from './tokens/font-weight';
@@ -7,6 +5,7 @@ import { lineHeight } from './tokens/line-height';
 import { radius } from './tokens/radius';
 import { screen } from './tokens/screen';
 import { shadow } from './tokens/shadow';
+import { sizing } from './tokens/sizing';
 import { spacing } from './tokens/spacing';
 
 const theme = {
@@ -14,16 +13,17 @@ const theme = {
   spacing,
   shadow,
   radius,
+  sizing,
   fontSize,
   fontWeight,
   lineHeight,
-  screen,
-  utilities: {
-    minWidth,
-    setSpacing
-  }
+  screen
 } as const;
 
 export const getTheme = () => {
   return theme;
 };
+
+const themeBase = getTheme();
+
+export type ThemeType = typeof themeBase;
