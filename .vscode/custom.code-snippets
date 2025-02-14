@@ -1,0 +1,19 @@
+{
+  "Custom Hook": {
+    "prefix": "useHook",
+    "body": [
+      "import { useState, useEffect } from 'react';",
+      "",
+      "export const use${1:CustomHook} = () => {",
+      "  const [state, setState] = useState(${2:null});",
+      "",
+      "  useEffect(() => {",
+      "    // Lógica do efeito aqui",
+      "  }, [${3:dependencies}]);",
+      "",
+      "  return { state, setState };",
+      "};"
+    ],
+    "description": "Cria um hook customizado usando arrow function"
+  }
+}

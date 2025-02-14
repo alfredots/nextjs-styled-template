@@ -1,5 +1,11 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.tree.indent": 16,
   "editor.formatOnSave": true,
-  "explorer.compactFolders": false
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "explorer.compactFolders": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative"
 }

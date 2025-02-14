@@ -1,7 +1,19 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle`
- * {
+interface GlobalStyles {
+  fontNext: {
+    className: string;
+    style: {
+      fontFamily: string;
+      fontWeight?: number;
+      fontStyle?: string;
+    };
+  };
+}
+
+export const GlobalStyles = createGlobalStyle<GlobalStyles>`
+ ${({ fontNext }) => css`
+   * {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
@@ -12,4 +24,10 @@ export const GlobalStyles = createGlobalStyle`
    #__next {
      height: 100%;
    }
+
+   body {
+     font-family: ${fontNext.style.fontFamily};
+   }
+ `}
+
 `;

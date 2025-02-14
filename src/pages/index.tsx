@@ -1,5 +1,5 @@
-import { HomeTemplate } from 'templates/Home'
+import { HomeModule } from '@/ui/modules/Home';
 
 export default function Home() {
-  return <HomeTemplate />
+  return <HomeModule />;
 }
