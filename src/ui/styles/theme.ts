@@ -1,12 +1,12 @@
-import { colors } from './tokens/colors';
-import { fontSize } from './tokens/font-size';
-import { fontWeight } from './tokens/font-weight';
-import { lineHeight } from './tokens/line-height';
-import { radius } from './tokens/radius';
-import { screen } from './tokens/screen';
-import { shadow } from './tokens/shadow';
-import { sizing } from './tokens/sizing';
-import { spacing } from './tokens/spacing';
+import { breakpoints } from '@/ui/styles/tokens/breakpoints';
+import { colors } from '@/ui/styles/tokens/colors';
+import { fontSize } from '@/ui/styles/tokens/font-size';
+import { fontWeight } from '@/ui/styles/tokens/font-weight';
+import { lineHeight } from '@/ui/styles/tokens/line-height';
+import { radius } from '@/ui/styles/tokens/radius';
+import { shadow } from '@/ui/styles/tokens/shadow';
+import { sizing } from '@/ui/styles/tokens/sizing';
+import { spacing } from '@/ui/styles/tokens/spacing';
 
 const theme = {
   colors,
@@ -17,13 +17,13 @@ const theme = {
   fontSize,
   fontWeight,
   lineHeight,
-  screen
+  breakpoints
 } as const;
 
 export const getTheme = () => {
   return theme;
 };
 
-const themeBase = getTheme();
+export const themeBase = getTheme();
 
-export type ThemeType = typeof themeBase;
+export type ThemeProps = typeof theme;

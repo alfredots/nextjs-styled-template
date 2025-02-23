@@ -13,14 +13,7 @@ export const HomeModule = () => {
       <h2>
         TWD <span>NEXT</span>
       </h2>
-      <Box
-        sizing={{
-          width: '100px',
-          height: '100px'
-        }}
-      >
-        teste
-      </Box>
+      <Box $style={{ width: '200px', height: '200px', backgroundColor: 'primary-500', backgroundSize: 'auto' }}>teste</Box>
       <p>{JSON.stringify(users)}</p>
     </main>
   );

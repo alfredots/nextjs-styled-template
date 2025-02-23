@@ -1,2 +1,2 @@
-export * from './localStorage'
-export * from './delay'
+export * from './local-storage';
+export * from './delay';
