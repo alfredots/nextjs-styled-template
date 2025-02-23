@@ -2,7 +2,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 
-import { getTheme, GlobalStyles, inter } from '@/styles';
+import { getTheme, GlobalStyles, inter } from '@/ui/styles';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

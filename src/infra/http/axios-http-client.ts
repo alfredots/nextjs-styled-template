@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 
-import { HttpClient, HttpRequest, HttpResponse } from '@/contracts/protocols';
-import { isObject } from '@/utils/validators/is-object';
+import { HttpClient, HttpRequest, HttpResponse } from '@/application/protocols';
+import { isObject } from '@/main/validators/is-object';
 
 export interface ErrorDetail {
   code: string;
