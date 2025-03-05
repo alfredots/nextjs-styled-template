@@ -1,0 +1,63 @@
+:root {
+  /* 🎨 Cores */
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-error: #dc3545;
+  --color-background: #ffffff;
+  --color-text: #333333;
+
+  /* 🔤 Tipografia */
+  --font-family: 'Inter', sans-serif;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+  --line-height-12: 1.2;
+  --line-height-15: 1.5;
+  --line-height-18: 1.8;
+
+  /* 📏 Espaçamentos */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+
+  /* 🔳 Bordas */
+  --border-width-1: 1px;
+  --border-width-3: 3px;
+  --border-radius-4: 4px;
+  --border-radius-8: 8px;
+  --border-radius-16: 16px;
+
+  /* 🌑 Sombras */
+  --shadow-2: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-4: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-8: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+  /* 🎬 Transições */
+  --transition-200: 0.2s ease-in-out;
+  --transition-400: 0.4s ease-in-out;
+  --transition-600: 0.6s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}

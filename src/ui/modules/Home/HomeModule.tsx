@@ -1,20 +1,19 @@
-import { useMemo } from 'react';
+import './styles.module.css';
 
 import { makeGetUsers } from '@/main/use-cases';
-import { Box } from '@/ui/components/Box';
-import { useGetUsers } from '@/ui/modules/Home/hooks/use-get-users';
 
-export const HomeModule = () => {
-  const getUsers = useMemo(makeGetUsers, []);
-  const { users } = useGetUsers({ getUsers });
+export const HomeModule = async () => {
+  const getUsers = makeGetUsers();
+  const users = await getUsers.execute();
 
   return (
-    <main>
-      <h2>
-        TWD <span>NEXT</span>
-      </h2>
-      <Box $style={{ width: '200px', height: '200px', backgroundColor: 'primary-500', backgroundSize: 'auto' }}>teste</Box>
-      <p>{JSON.stringify(users)}</p>
-    </main>
+    <div>
+      <h1 className="heading">Lista de Usuários</h1>
+      <ul>
+        {users.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+    </div>
   );
 };
